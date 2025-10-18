@@ -1,45 +1,125 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   background: #0e0e0e;
   color: #fff;
   margin: 0;
   text-align: center;
 }
 
+/* ===== HEADER ===== */
 header {
-  padding: 40px 20px;
-  background: linear-gradient(90deg, #b11e24, #111);
+  padding: 70px 20px;
+  background: linear-gradient(90deg, #b11e24, #000);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
 
+header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* ===== GRID ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 35px;
+  padding: 70px;
+  max-width: 1300px;
+  margin: auto;
 }
 
+/* ===== CARDS ===== */
 .card {
-  background: #1a1a1a;
-  border-radius: 12px;
+  background: #151515;
+  border-radius: 14px;
   padding: 20px;
-  text-decoration: none;
-  color: #fff;
-  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
 }
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
 .card:hover {
-  transform: translateY(-5px);
-  background: #222;
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
 }
 
-footer {
-  padding: 20px;
-  background: #111;
+.card:hover img {
+  transform: scale(1.02);
 }
+
+.card h2 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #b11e24;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #d3262c;
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 40px;
+  background: #111;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
 footer a {
   color: #b11e24;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  .grid {
+    padding: 40px 20px;
+  }
 }
