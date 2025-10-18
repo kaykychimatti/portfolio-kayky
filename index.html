@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio — Kayky Chimatti</title>
+  <style>
+    :root{
+      --bg:#0b0c10; --card:#111317; --text:#f5f7fb; --muted:#aab2c5; --accent:#3a86ff; --line:#1b1f27;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#0b0c10 0%, #0d1117 100%);
+      color:var(--text);
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:48px 20px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:32px}
+    .brand{font-weight:700; letter-spacing:.5px}
+    .tag{color:var(--muted); font-size:14px}
+    .card{
+      background:var(--card); border:1px solid var(--line); border-radius:18px;
+      padding:28px; box-shadow:0 10px 30px rgba(0,0,0,.25);
+    }
+    h1{font-size:32px; margin:0 0 10px}
+    p{margin:0 0 14px; color:var(--muted); line-height:1.6}
+    .grid{display:grid; grid-template-columns:1fr; gap:18px; margin-top:18px}
+    @media(min-width:850px){ .grid{grid-template-columns:repeat(3,1fr)} }
+    .thumb{
+      border:1px solid var(--line); border-radius:14px; overflow:hidden; background:#0e1116;
+      aspect-ratio:16/10; display:flex; align-items:center; justify-content:center;
+    }
+    .thumb img{width:100%; height:100%; object-fit:cover; display:block}
+    .btns{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px}
+    .btn{
+      background:var(--accent); color:#fff; border:none; padding:12px 16px; font-weight:600;
+      border-radius:10px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+      box-shadow:0 6px 16px rgba(58,134,255,.35);
+    }
+    .btn.secondary{
+      background:transparent; color:var(--text); border:1px solid var(--line); box-shadow:none;
+    }
+    footer{margin-top:32px; color:var(--muted); font-size:14px}
+    .contact{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+    .pill{border:1px solid var(--line); padding:8px 10px; border-radius:999px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">KAYKY CHIMATTI</div>
+        <div class="tag">WordPress Developer • Sites profissionais & Landing Pages</div>
+      </div>
+      <a class="btn" href="./Portfolio_Kayky_Chimatti_Profissional.pdf" target="_blank" rel="noopener">
+        📄 Baixar PDF
+      </a>
+    </header>
+
+    <main class="card">
+      <h1>Portfólio</h1>
+      <p>Sites profissionais, responsivos e focados em conversão. Abaixo, alguns destaques recentes.</p>
+
+      <div class="grid">
+        <div class="thumb"><img src="./assets/mercantil.png" alt="Mercantil Johanssen (thumb)"></div>
+        <div class="thumb"><img src="./assets/zumbi.png" alt="Operação Zumbi (thumb)"></div>
+        <div class="thumb"><img src="./assets/barbearia.png" alt="Barbearia Leo Cortes (thumb)"></div>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="https://wa.me/5511946118268" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+        <a class="btn secondary" href="./Portfolio_Kayky_Chimatti_Profissional.pdf" target="_blank" rel="noopener">Ver PDF</a>
+      </div>
+    </main>
+
+    <footer>
+      <div>Contato</div>
+      <div class="contact">
+        <span class="pill">📞 (11) 94611-8268</span>
+        <span class="pill">📧 kaykychimatti@gmail.com</span>
+        <span class="pill">📍 São Paulo — Zona Norte</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
